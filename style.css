@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Kbold";
+    src: url(.//ressources/Fonts/KyivTypeSans-Bold-.otf);
+}
+@font-face {
+    font-family: "Knorm";
+    src: url(.//ressources/Fonts/KyivTypeSans-Thin.otf);
+}
+@font-face {
+    font-family: "Klight";
+    src: url(.//ressources/Fonts/KyivTypeSans-Light.ttf);
+}
+:root{
+    --titleFont: Kbold, monospace;
+    --mainFont: Knorm, monospace;
+    --preFont: Klight, monospace;
+    --mainColor: #DAD7CD;
+    --secondColor: #538083;
+    --titleSize: 50px;
+    --subtitleSize: 36px;
+    --mainSize:30px;
+
+}
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: var(--mainFont);
+    font-size: var(--titleSize);
+}
+body{
+    background-color: var(--mainColor);
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    
+}
+.contact > span{
+    font-size: var(--subtitleSize);
+    font-family: var(--mainFont);
+}
+.contact > i{
+    border: 2px solid var(--secondColor);
+    color: var(--secondColor) ;
+    padding: 10px;
+    border-radius: 50%;
+}
