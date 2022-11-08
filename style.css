@@ -157,3 +157,103 @@ body{
 .block > span:nth-child(1){
     font-family: var(--titleFont);
 }
+/* Projets */
+.project{
+    min-height: 150vh;
+}
+.proj{
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--subtitleSize);
+    color: var(--mainColor);
+    background-color: var(--secondColor);
+    font-family: var(--titleFont);
+}
+.proj > span {
+    margin-left: 20px;
+}
+/* Block projet */
+
+.blockproj{
+    display: block;
+    margin-top: 50px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.blockproj > p{
+    width: 90%;
+    font-family: var(--mainFont);
+    color: var(--secondColor);
+    text-align: justify;
+    padding: 20px;
+    border: 10px solid var(--secondColor);
+}
+.blockproj > img{
+    border: 10px solid var(--secondColor);
+}
+.numberText{
+    font-family: var(--titleFont);
+    color: var(--secondColor);
+    margin-top: -30px;
+}
+/* Formulaire */
+.discussPage{
+    min-height: 100vh;
+    width: 100vw;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    position: relative;
+    border-radius: 10%;
+    padding: 10px;
+    width: 90%;
+    background-color: var(--secondColor);
+    margin-top: 100px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    gap: 20px;
+}
+form > input, textarea{
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+form > input:nth-child(1){
+    margin-top: 50px;
+}
+input::placeholder{
+    color: var(--secondColor);
+    font-family: var(--titleFont);
+}
+textarea::placeholder{
+    color: var(--secondColor);
+    font-family: var(--titleFont);
+}
+.titleForm{
+    color: var(--mainColor);
+    font-family: var(--titleFont);
+}
+form > input:nth-last-of-type(1){
+    color: var(--secondColor);
+    font-family: var(--titleFont);
+    width: 60%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+form > input:nth-last-of-type(1):hover{
+    color: var(--mainColor);
+    background-color: var(--secondColor);
+    border: 2px solid var(--mainColor);
+}
