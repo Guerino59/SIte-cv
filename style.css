@@ -19,14 +19,18 @@
     --titleFont: Kbold, monospace;
     --mainFont: Knorm, monospace;
     --preFont: Klight, monospace;
-    --mainColor: #DAD7CD;
-    --secondColor: #538083;
     --titleSize: 50px;
     --subtitleSize: 36px;
     --mainSize:30px;
-
 }
-
+[data-theme="main"]{
+    --mainColor: #DAD7CD;
+    --secondColor: #538083;
+}
+[data-theme="second"]{
+    --mainColor: #538083;
+    --secondColor: #DAD7CD;
+}
 /* Reset CSS */
 
 *, ::before, ::after{
@@ -63,6 +67,15 @@ body{
     color: var(--secondColor) ;
     padding: 10px;
     border-radius: 50%;
+}
+.contact > button {
+    border: none;
+    color: var(--mainColor);
+    background-color: var(--secondColor);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--titleFont);
+    cursor: pointer;
 }
 
 /* Titre Main page */
