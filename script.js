@@ -3,9 +3,10 @@
 
 
 
-document.querySelector('nav button').forEach(item => {
-    item.addEventListener('click', second);
-})
+const btn = document.querySelector('nav button');
+
+btn.addEventListener('click', second);
+
 
 function second() {
     let body = document.querySelector('body');
