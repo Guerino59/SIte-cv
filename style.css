@@ -28,8 +28,16 @@
     --secondColor: #538083;
 }
 [data-theme="second"]{
-    --mainColor: #538083;
-    --secondColor: #DAD7CD;
+    --mainColor: #2c4251;
+    --secondColor: #ff5a5f;
+}
+[data-theme="third"]{
+    --mainColor: #485696;
+    --secondColor: #e7e7e7;
+}
+[data-theme="fourth"]{
+    --mainColor: #251605;
+    --secondColor: #f6e27f;
 }
 /* Reset CSS */
 
@@ -37,6 +45,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* transition: color 0.5s linear, background-color 0.5s linear; */
 }
 body{
     background-color: var(--mainColor);
@@ -269,4 +278,12 @@ form > input:nth-last-of-type(1):hover{
     color: var(--mainColor);
     background-color: var(--secondColor);
     border: 2px solid var(--mainColor);
+}
+@media screen and (min-width:700px){
+    .socials{
+        margin-top: 80px;
+    }
+    .socials > ul{
+        gap: 100px;
+    }
 }
