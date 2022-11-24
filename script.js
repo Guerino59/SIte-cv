@@ -25,3 +25,16 @@ function second() {
       body.dataset.theme = "main"
     }
   }
+  const open = document.querySelector('.contact i');
+  const modal = document.querySelector('.modal-contact');
+  const close = document.querySelector('.modal-contact i');
+  const page = document.querySelector('.mainPageMobile')
+  open.addEventListener('click', ()=>{
+    modal.style.animationName = "open"
+    page.style.opacity ="0.5"
+  })
+  close.addEventListener('click', ()=>{
+    modal.style.animationName = "close"
+    page.style.opacity ="1"
+  })
+
