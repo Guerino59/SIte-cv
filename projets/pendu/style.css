@@ -1,0 +1,148 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    height: 100vh;
+}
+canvas{
+    margin-top: -90px;
+}
+.container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.anim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.img{
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+}
+.nbError{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%); 
+    font-size: 2rem;
+    
+}
+.mot{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 30%;
+    animation: 0.5s linear infinite; 
+}
+.mot span
+{   
+    margin: 0px 10px;
+    color: black;
+    position: relative;
+    font-size: 3rem;
+}
+.mot .link{
+    position: absolute;
+    top: -150%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.clavier{
+    display: block;
+    margin: auto;
+    height: 40vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+.w{
+    grid-column: 3;
+}
+.lettre{
+    margin: 10px;
+}
+.nbLetter{
+    width: 100%;
+    text-align: center;
+    position:absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.restart{
+    position:absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid black;
+    border-radius: 50px;
+    padding: 15px 27px;
+    font-weight: bold;
+    font-size: 2rem ;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 1s linear;
+    transition: top 1s linear;
+    z-index: 1000000;
+}
+.restart:hover{
+    background-color: black;
+    color: white;
+}
+
+
+@media screen and (max-width: 700px) {
+    
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 60px;
+        height: 65vh;
+    }
+    .anim{
+        margin-top: 50px;
+    }
+    .nbLetter{
+        top: -15px;
+    }
+
+    .nbError{
+        bottom: -50px;
+    }
+    .clavier{
+        gap: 0px;
+        height: 35vh;
+        width: 90%;
+    }
+    .lettre{
+        margin: 2px;
+        height: 50%;
+    }
+    .restart{
+        font-size: 1.2rem;
+        border: 2px solid black;
+        padding: 10px 20px;
+    }
+    .mot{
+        margin-top: 40px;
+    }
+}
