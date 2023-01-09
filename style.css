@@ -177,6 +177,9 @@ body{
     font-size: var(--mainSize);
     color: var(--secondColor);
 }
+.forma, .comp, .passion{
+    height: 100%;
+}
 .block{
     display: flex;
     flex-direction: column;

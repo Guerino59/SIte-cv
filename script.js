@@ -1,5 +1,6 @@
 
 "use strict";
+// screen.lockOrientation('portrait');
 
 const btn = document.querySelector('button');
 console.log(btn);
