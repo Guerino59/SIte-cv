@@ -45,7 +45,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* transition: color 0.5s linear, background-color 0.5s linear; */
 }
 body{
     background-color: var(--mainColor);
@@ -109,21 +108,21 @@ body{
 .title > span:nth-last-of-type(1){
     font-family: var(--titleFont);
     position: absolute;
-    right: 20px;
+    right: -200px;
     top: 65%;
-    
+    transition: right 3s ease;
 }
 .title > span:nth-last-of-type(2){
     font-family: var(--mainFont);
-    margin-left: 10px;
+    margin-left: -200px;
     margin-top: -30px;
-
+    transition: margin-left 3s ease;
 }
-
 /* Photo de profil */
 .profile{
     max-height: 100vh;
-
+    opacity: 0;
+    transition: opacity 3s ease;
 }
 .profile > img {
     display: block;
@@ -173,12 +172,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: calc(100vh - 150px);
+    height: 100vh;
     font-size: var(--mainSize);
     color: var(--secondColor);
 }
 .forma, .comp, .passion{
-    height: 100%;
+    margin-left: 80vw;
+    transition: margin-left 2s linear;
 }
 .block{
     display: flex;
@@ -209,7 +209,6 @@ body{
 /* Block projet */
 
 .blockproj{
-    display: block;
     margin-top: 50px;
     height: 550px;
     display: flex;
@@ -218,15 +217,18 @@ body{
     gap: 50px;
 }
 .blockproj > p{
-    width: 90%;
-    font-family: var(--mainFont);
+    width: 60%;
+    font-family: var(--titleFont);
     color: var(--secondColor);
     text-align: justify;
     padding: 20px;
     border: 10px solid var(--secondColor);
+    border-radius: 10px;
+    text-align: center;
 }
 .blockproj > img{
     border: 10px solid var(--secondColor);
+    border-radius: 10px;
 }
 .numberText{
     font-family: var(--titleFont);

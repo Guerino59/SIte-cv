@@ -116,7 +116,7 @@ canvas{
         flex-direction: column;
         justify-content: space-around;
         gap: 60px;
-        height: 65vh;
+        height: 70vh;
     }
     .anim{
         margin-top: 50px;
@@ -130,7 +130,7 @@ canvas{
     }
     .clavier{
         gap: 0px;
-        height: 35vh;
+        height: 30vh;
         width: 90%;
     }
     .lettre{

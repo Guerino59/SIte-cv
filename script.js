@@ -38,4 +38,41 @@ function second() {
     modal.style.animationName = "close"
     page.style.opacity ="1"
   })
+   // on load
+  const pp = document.querySelector('.profile');
+  const titleM = document.querySelector('.title span:nth-child(1)');
+  const titleN = document.querySelector('.title span:nth-child(3)');
+   window.addEventListener('load', ()=>
+   {
+      pp.style.opacity = 1;
+      titleM.style.marginLeft = "10px";
+      titleN.style.right = "20px";
+   })
+
+   let options = {
+    root: document.querySelector('#scrollArea'),
+    rootMargin: '0px',
+    threshold: 0.5
+  }
+  
+  let observer = new IntersectionObserver(callback, options);
+  const passion = document.querySelector('.passion');
+  const comp = document.querySelector('.comp');
+  const forma = document.querySelector('.forma');
+  
+
+  
+  observer.observe(passion);
+  observer.observe(comp);
+  observer.observe(forma);
+  
+  
+  console.log(observer);
+  function callback(entries, observer) { 
+    entries.forEach(entry => {
+      if(entry.isIntersecting)
+      entry.target.style.marginLeft = "5vw"
+    });
+  }
+  
 
