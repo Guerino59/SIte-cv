@@ -29,14 +29,23 @@ function second() {
   const open = document.querySelector('.contact i');
   const modal = document.querySelector('.modal-contact');
   const close = document.querySelector('.modal-contact i');
-  const page = document.querySelector('.mainPageMobile')
+  const page = document.querySelector('.mainPageMobile');
+  const secondP = document.querySelector('.secondPageMobile');
+  const project = document.querySelector('.project');
+  const discuss = document.querySelector('.discussPage');
   open.addEventListener('click', ()=>{
     modal.style.animationName = "open"
     page.style.opacity ="0.5"
+    secondP.style.opacity ="0.5"
+    project.style.opacity ="0.5"
+    discuss.style.opacity ="0.5"
   })
   close.addEventListener('click', ()=>{
     modal.style.animationName = "close"
     page.style.opacity ="1"
+    secondP.style.opacity ="1"
+    project.style.opacity ="1"
+    discuss.style.opacity ="1"
   })
    // on load
   const pp = document.querySelector('.profile');
