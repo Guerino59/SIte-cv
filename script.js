@@ -59,20 +59,29 @@ function second() {
   const passion = document.querySelector('.passion');
   const comp = document.querySelector('.comp');
   const forma = document.querySelector('.forma');
-  
-
-  
+  const proj = document.querySelectorAll('.blockproj');
   observer.observe(passion);
   observer.observe(comp);
   observer.observe(forma);
-  
-  
-  console.log(observer);
+
   function callback(entries, observer) { 
     entries.forEach(entry => {
       if(entry.isIntersecting)
       entry.target.style.marginLeft = "5vw"
     });
   }
-  
+  let observproj = new IntersectionObserver((entries)=>{
+    entries.forEach(entry =>{
+      console.log(entry);
+      if(entry.isIntersecting)
+      {
+        entry.target.style.opacity = "1"
+      }
+    })
+  },options)
+
+  for(const pro of proj)
+  {
+  observproj.observe(pro);
+  }
 
