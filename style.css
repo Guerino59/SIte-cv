@@ -65,6 +65,7 @@ body{
     align-items: center;
     justify-content: space-around;
     height: 70px;
+    border-bottom: 2px solid var(--secondColor);
 }
 .contact > span{
     font-size: var(--subtitleSize);
@@ -149,6 +150,11 @@ body{
 }
 .socials > ul > li > a > i{
     color: var(--secondColor);
+    margin-bottom: 5vh;
+    transition: transform 0.2s linear;
+}
+.socials > ul > li > a > i:hover{
+    transform: scale(1.2);
 }
 /* Deuxieme page mobile */
 .secondPageMobile{
@@ -177,7 +183,7 @@ body{
     color: var(--secondColor);
 }
 .forma, .comp, .passion{
-    margin-left: 80vw;
+    margin-left: -50vw;
     transition: margin-left 2s linear;
 }
 .block{
